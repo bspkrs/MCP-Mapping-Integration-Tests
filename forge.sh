@@ -20,4 +20,4 @@ sed -i 's/@PLUGIN@/'${PLUGIN}'/g' ${GRADLE_BUILD}
 sed -i 's/@VERSION@/'${VERSION}'/g' ${GRADLE_BUILD}
 sed -i 's/@MAPPINGS@/'${MAPPINGS}'/g' ${GRADLE_BUILD}
 
-gradle recompMinecraft
+#gradle recompMinecraft
