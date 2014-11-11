@@ -5,7 +5,7 @@ PLUGIN=fml # fml  or forge
 MC_VERSION=1.8
 PLUGIN_VERSION=`python get_json_value.py ${PLUGIN} promos/latest-1.8`
 VERSION=${MC_VERSION}-${PLUGIN_VERSION}-${MC_VERSION}
-MAPPINGS=snapshot_$(date +"%C%y%m%d")
+MAPPINGS=$1
 
 # files
 TO_REPLACE=build.gradle_pre
