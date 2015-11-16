@@ -15,9 +15,10 @@ buildscript {
     }
 }
 
-apply plugin: '@PLUGIN@'
+apply plugin: 'net.minecraftforge.gradle.@PLUGIN@'
 
 minecraft {
     version = "@VERSION@"
-	mappings = "@MAPPINGS@"
+    mappings = "@MAPPINGS@"
+    makeObfSourceJar = false
 }
