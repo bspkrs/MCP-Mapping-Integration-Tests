@@ -1,11 +1,17 @@
 #! /bin/bash
-# usage: ./setup_gradle.sh 2.0 1.8 forge promos/1.8-latest stable_17
+# usage: ./setup_gradle.sh 2.0 1.8 forge promos/1.8-latest stable_17 1
 
 FG=$1
 PLUGIN=$3
 MC_VERSION=$2
+IS_MASTER=$4
 PLUGIN_VERSION=`python get_json_value.py ${PLUGIN} $4`
-VERSION=${MC_VERSION}-${PLUGIN_VERSION}-${MC_VERSION}
+if [ "$IS_MASTER" != "1" ]
+then
+    VERSION=${MC_VERSION}-${PLUGIN_VERSION}-${MC_VERSION}
+else
+    VERSION=${MC_VERSION}-${PLUGIN_VERSION}
+fi
 MAPPINGS=$5
 
 # files
