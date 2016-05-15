@@ -4,7 +4,7 @@
 FG=$1
 PLUGIN=$3
 MC_VERSION=$2
-IS_MASTER=$4
+IS_MASTER=$5
 PLUGIN_VERSION=`python get_json_value.py ${PLUGIN} $4`
 if [ "$IS_MASTER" != "1" ]
 then
