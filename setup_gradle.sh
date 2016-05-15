@@ -2,17 +2,17 @@
 # usage: ./setup_gradle.sh 2.0 1.8 forge promos/1.8-latest stable_17 1
 
 FG=$1
-PLUGIN=$3
 MC_VERSION=$2
-IS_MASTER=$5
+PLUGIN=$3
 PLUGIN_VERSION=`python get_json_value.py ${PLUGIN} $4`
+MAPPINGS=$5
+IS_MASTER=$6
 if [ "${IS_MASTER}" != "1" ]
 then
     VERSION=${MC_VERSION}-${PLUGIN_VERSION}-${MC_VERSION}
 else
     VERSION=${MC_VERSION}-${PLUGIN_VERSION}
 fi
-MAPPINGS=$5
 
 # files
 TO_REPLACE=build.gradle_pre
