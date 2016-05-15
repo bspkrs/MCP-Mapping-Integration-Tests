@@ -6,7 +6,7 @@ PLUGIN=$3
 MC_VERSION=$2
 IS_MASTER=$5
 PLUGIN_VERSION=`python get_json_value.py ${PLUGIN} $4`
-if [ "$IS_MASTER" != "1" ]
+if [ "${IS_MASTER}" != "1" ]
 then
     VERSION=${MC_VERSION}-${PLUGIN_VERSION}-${MC_VERSION}
 else
